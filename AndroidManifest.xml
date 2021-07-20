@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="net.leifandersen.mobile.android.easybutton"
+      android:versionCode="3" android:versionName="1.1.1">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        
+
+    <receiver android:icon="@drawable/button" android:label="@string/app_name" android:name=".EasyButton"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"></action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@xml/easy_button"></meta-data>
+</receiver>
+
+    <receiver android:icon="@drawable/button" android:name=".EasyButtonSmall" android:label="@string/easy_button_small"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"></action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@xml/easy_button_small"></meta-data>
+</receiver>
+
+<service android:name=".EasyButtonService"></service>
+
+<activity android:name=".EasyButtonActivity" android:label="@string/app_name"><intent-filter><action android:name="android.intent.action.MAIN"></action>
+<category android:name="android.intent.category.LAUNCHER"></category>
+</intent-filter>
+</activity>
+</application>
+    <uses-sdk android:minSdkVersion="3" />
+    
+
+
+</manifest> 

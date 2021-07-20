@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton android:id="@+id/easy_button_layout_small" android:layout_width="wrap_content" android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" android:src="@drawable/button" android:clickable="true" android:maxHeight="74dp" android:maxWidth="74dp" android:minHeight="74dp" android:minWidth="74dp" android:saveEnabled="true" android:scaleType="centerInside" android:background="#0111"></ImageButton>
