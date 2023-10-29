@@ -2,6 +2,8 @@ package comleifandersen.aashish.easybutton
 
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.Handler
+import android.provider.MediaStore.Audio.Media
 import android.view.View
 import android.widget.ImageButton
 import androidx.activity.ComponentActivity
@@ -16,8 +18,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import comleifandersen.aashish.easybutton.ui.theme.EasyButtonTheme
 
 class MainActivity : ComponentActivity() {
-    private lateinit var mp: MediaPlayer;
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -29,22 +29,21 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        this.mp = MediaPlayer.create(applicationContext, R.raw.easy)
         setContentView(R.layout.easy_button_layout)
         (findViewById<View>(R.id.easy_button_layout) as ImageButton).setOnClickListener {
-            this@MainActivity.mp.release()
-            this@MainActivity.mp = MediaPlayer.create(this@MainActivity.applicationContext, R.raw.easy)
-            this@MainActivity.mp.start()
+            Thread {
+                val leMediaPlayer = MediaPlayer.create(this@MainActivity.applicationContext, R.raw.easy)
+                leMediaPlayer.start()
+                Thread.sleep(3333)
+                leMediaPlayer.release()
+            }.start()
         }
     }
 }
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+    Text(text = "Hello $name!", modifier = modifier)
 }
 
 @Preview(showBackground = true)

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Easy Button</string>
+    <string name="easy_button_small">Easy Button Small</string>
 </resources>
