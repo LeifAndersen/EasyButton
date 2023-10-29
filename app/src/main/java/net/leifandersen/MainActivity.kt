@@ -2,8 +2,6 @@ package net.leifandersen.mobile.android.easybutton
 
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.os.Handler
-import android.provider.MediaStore.Audio.Media
 import android.view.View
 import android.widget.ImageButton
 import androidx.activity.ComponentActivity
@@ -31,12 +29,11 @@ class MainActivity : ComponentActivity() {
 
         setContentView(R.layout.easy_button_layout)
         (findViewById<View>(R.id.easy_button_layout) as ImageButton).setOnClickListener {
-            Thread {
-                val leMediaPlayer = MediaPlayer.create(this@MainActivity.applicationContext, R.raw.easy)
-                leMediaPlayer.start()
-                Thread.sleep(3333)
+            val leMediaPlayer = MediaPlayer.create(this@MainActivity.applicationContext, R.raw.easy)
+            leMediaPlayer.start()
+            leMediaPlayer.setOnCompletionListener{
                 leMediaPlayer.release()
-            }.start()
+            }
         }
     }
 }
