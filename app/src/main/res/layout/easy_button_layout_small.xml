@@ -1,3 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImageButton android:id="@id/easy_button_layout_small" android:background="#00111111" android:clickable="true" android:saveEnabled="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button" android:scaleType="centerInside" android:maxWidth="74.0dip" android:maxHeight="74.0dip" android:minWidth="74.0dip" android:minHeight="74.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@id/easy_button_layout_small"
+        android:background="#00111111"
+        android:clickable="true"
+        android:saveEnabled="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/button"
+        android:scaleType="centerInside"
+        android:maxWidth="74.0dip"
+        android:maxHeight="74.0dip"
+        android:minWidth="74.0dip"
+        android:minHeight="74.0dip" />
