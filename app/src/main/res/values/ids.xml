@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="easy_button_layout" />
+    <item type="id" name="easy_button_layout_small" />
+    <item type="id" name="easy.mp3" />
+</resources>
