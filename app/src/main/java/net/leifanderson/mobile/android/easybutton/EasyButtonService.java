@@ -1,4 +1,4 @@
-package net.leifandersen.mobile.android.easybutton;
+package net.leifanderson.mobile.android.easybutton;
 
 import android.app.Service;
 import android.content.Intent;
@@ -22,7 +22,7 @@ public class EasyButtonService extends Service {
 }
 
 
-/* Location:              C:\Users\aashi\Downloads\jd-gui-windows-1.6.6\jd-gui-windows-1.6.6\the_apk-dex2jar.jar!\net\leifandersen\mobile\android\easybutton\EasyButtonService.class
+/* Location:              C:\Users\aashi\Downloads\jd-gui-windows-1.6.6\jd-gui-windows-1.6.6\the_apk-dex2jar.jar!\net\net.leifanderson.mobile.android.net.leifanderson.mobile.android.net.leifanderson\mobile\android\net.leifanderson.mobile.android.net.leifanderson\EasyButtonService.class
  * Java compiler version: 6 (50.0)
  * JD-Core Version:       1.1.3
  */

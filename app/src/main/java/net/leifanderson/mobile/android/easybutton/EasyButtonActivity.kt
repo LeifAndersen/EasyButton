@@ -1,4 +1,4 @@
-package net.leifandersen.mobile.android.easybutton
+package net.leifanderson.mobile.android.easybutton
 
 import android.media.MediaPlayer
 import android.os.Bundle
@@ -13,9 +13,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import net.leifandersen.mobile.android.easybutton.ui.theme.EasyButtonTheme
+import net.leifanderson.mobile.android.easybutton.ui.theme.EasyButtonTheme
 
-class MainActivity : ComponentActivity() {
+class EasyButtonActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
 
         setContentView(R.layout.easy_button_layout)
         (findViewById<View>(R.id.easy_button_layout) as ImageButton).setOnClickListener {
-            val leMediaPlayer = MediaPlayer.create(this@MainActivity.applicationContext, R.raw.easy)
+            val leMediaPlayer = MediaPlayer.create(this@EasyButtonActivity.applicationContext, R.raw.easy)
             leMediaPlayer.start()
             leMediaPlayer.setOnCompletionListener{
                 leMediaPlayer.release()

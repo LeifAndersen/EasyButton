@@ -1,4 +1,4 @@
-package net.leifandersen.mobile.android.easybutton.ui.theme
+package net.leifanderson.mobile.android.easybutton.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
