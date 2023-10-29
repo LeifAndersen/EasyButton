@@ -1,4 +1,4 @@
-package comleifandersen.aashish.easybutton;
+package net.leifandersen.mobile.android.easybutton;
 
 import android.app.Service;
 import android.content.Intent;

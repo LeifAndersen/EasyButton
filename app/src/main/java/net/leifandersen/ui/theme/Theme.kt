@@ -1,4 +1,4 @@
-package comleifandersen.aashish.easybutton.ui.theme
+package net.leifandersen.mobile.android.easybutton.ui.theme
 
 import android.app.Activity
 import android.os.Build
