@@ -23,9 +23,3 @@ public class EasyButtonSmall extends AppWidgetProvider {
     } 
   }
 }
-
-
-/* Location:              C:\Users\aashi\Downloads\jd-gui-windows-1.6.6\jd-gui-windows-1.6.6\the_apk-dex2jar.jar!\net\net.leifanderson.mobile.android.net.leifanderson.mobile.android.net.leifanderson\mobile\android\net.leifanderson.mobile.android.net.leifanderson\EasyButtonSmall.class
- * Java compiler version: 6 (50.0)
- * JD-Core Version:       1.1.3
- */

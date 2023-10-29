@@ -18,14 +18,6 @@ import net.leifanderson.mobile.android.easybutton.ui.theme.EasyButtonTheme
 class EasyButtonActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            EasyButtonTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Greeting("Android")
-                }
-            }
-        }
 
         setContentView(R.layout.easy_button_layout)
         (findViewById<View>(R.id.easy_button_layout) as ImageButton).setOnClickListener {
@@ -35,18 +27,5 @@ class EasyButtonActivity : ComponentActivity() {
                 leMediaPlayer.release()
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(text = "Hello $name!", modifier = modifier)
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    EasyButtonTheme {
-        Greeting("Android")
     }
 }
