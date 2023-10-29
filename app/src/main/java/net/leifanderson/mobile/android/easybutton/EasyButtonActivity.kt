@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
+import android.os.PowerManager
 import android.provider.Settings
 import android.view.View
 import android.widget.ImageButton
@@ -27,7 +28,7 @@ class EasyButtonActivity : ComponentActivity() {
             }
         }
 
-        if(ContextCompat.checkSelfPermission(this@EasyButtonActivity, Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS) != PackageManager.PERMISSION_GRANTED) { // I have found that with the new API target, sometimes the app will be "optimized" and the service for the media playback won't start reliably without removing
+        if(!(getSystemService(POWER_SERVICE) as PowerManager).isIgnoringBatteryOptimizations(this.packageName)) { // I have found that with the new API target, sometimes the app will be "optimized" and the service for the media playback won't start reliably without removing
             // background restriction
             AlertDialog.Builder(this@EasyButtonActivity).setMessage("For the widget to reliably work, you need to grant background permissions.").setTitle("Permission needed").setPositiveButton("Okee, I will enably") { dialog, which ->
                     val myIntent = Intent()
