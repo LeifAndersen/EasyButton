@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.widget.RemoteViews;
 
 public class EasyButton extends AppWidgetProvider {
+  @Override
   public void onUpdate(Context paramContext, AppWidgetManager paramAppWidgetManager, int[] paramArrayOfint) {
     int j = paramArrayOfint.length;
     int i;
