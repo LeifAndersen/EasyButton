@@ -21,5 +21,7 @@ public class EasyButtonService extends Service{
                 param1MediaPlayer.release();
             }
         });
+
+        stopSelf();
     }
 }
