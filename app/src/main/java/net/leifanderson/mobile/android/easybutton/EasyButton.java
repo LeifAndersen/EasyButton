@@ -10,17 +10,11 @@ import android.widget.RemoteViews;
 public class EasyButton extends AppWidgetProvider{
     @Override
     public void onUpdate(Context paramContext, AppWidgetManager paramAppWidgetManager, int[] paramArrayOfint){
-        int j = paramArrayOfint.length;
-        int i;
-        for(i = 0; ; i++){
-            if(i >= j){
-                return;
-            }
-            int k = paramArrayOfint[i];
+        for(int i : paramArrayOfint){
             PendingIntent pendingIntent = PendingIntent.getService(paramContext, 0, new Intent(paramContext, EasyButtonService.class), PendingIntent.FLAG_IMMUTABLE);
             RemoteViews remoteViews = new RemoteViews(paramContext.getPackageName(), R.layout.easy_button_layout);
             remoteViews.setOnClickPendingIntent(R.id.easy_button_layout, pendingIntent);
-            paramAppWidgetManager.updateAppWidget(k, remoteViews);
+            paramAppWidgetManager.updateAppWidget(i, remoteViews);
         }
     }
 }
